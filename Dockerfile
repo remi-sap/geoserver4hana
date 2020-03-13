@@ -5,9 +5,9 @@ LABEL purpose=geoserver
 RUN apt-get -y install wget unzip
 
 #ENV JAVA_HOME /etc/alternatives/jre
-ENV GEOSERVER_VERSION=2.16.2 \
-    NGDBC_VER=2.4.70 \
-    GEOSERVER_HOME=/geoserver/geoserver-${GEOSERVER_VERSION}
+ARG GEOSERVER_VERSION=2.16.2
+ARG NGDBC_VER=2.4.70
+ENV GEOSERVER_HOME=/geoserver/geoserver-$GEOSERVER_VERSION
 
 #Get the java driver for SAP HANA
 WORKDIR /root

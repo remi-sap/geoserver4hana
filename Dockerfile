@@ -2,6 +2,8 @@ FROM openjdk:8u242-jre-stretch
 #The choice of base image is mostly due to license issues and size.
 
 LABEL purpose=geoserver
+LABEL maintainer="Remi Astier<remi.astier@sap.com>"
+
 RUN apt-get update && apt-get -y install wget unzip
 
 #ENV JAVA_HOME /etc/alternatives/jre
@@ -10,6 +12,7 @@ ENV GEOSERVER_VERSION=2.18.2 \
     GEOTOOLS_VER=24.2
 ENV GEOSERVER_HOME="/geoserver"
 ENV GEOSERVER_DATA_DIR="${GEOSERVER_HOME}/data_dir"
+ENV GEOSERVER_CSRF_DISABLED=true
 
 #Get Geoserver and java driver for SAP HANA
 WORKDIR /geoserver

@@ -12,7 +12,7 @@ Start it on port 8080 with
 
 ```
 mkdir /tmp/geoserver_data
-docker run -d -it -p 8080:8080/tcp -v /tmp/geoserver_data:/geoserver/data_dir geoserver4hana
+docker run -d -it -p 8080:8080/tcp -v /tmp/geoserver_data:/geoserver/data_dir remiremi/geoserver4hana
 ```
 
 Then connect to the web page at [http://localhost:8080/geoserver/](http://localhost:8080/geoserver/)

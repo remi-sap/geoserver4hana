@@ -1,9 +1,10 @@
 # geoserver4hana
 Docker image of Geoserver with plugin for SAP HANA.
 
-It consists of GeoServer version 2.16.2 with two extensions:
+It consists of GeoServer version 2.21.1 with two extensions:
  * SAP HANA database plugin [tutorial on docs.geoserver.org](https://docs.geoserver.org/latest/en/user/community/hana/index.html)
- * Vector Tiles Extension [Installing the Vector Tiles Extension¶](https://docs.geoserver.org/latest/en/user/extensions/vectortiles/install.html)
+ * [Vector Tiles Extension](https://docs.geoserver.org/latest/en/user/extensions/vectortiles/install.html)
+ * [Monitoring Extension](https://docs.geoserver.org/latest/en/user/extensions/monitoring/index.html)
 
 Pull the image with
 

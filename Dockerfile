@@ -22,6 +22,7 @@ RUN wget --no-verbose "https://freefr.dl.sourceforge.net/project/geoserver/GeoSe
   && mv ngdbc*.jar $(dirname $(find /geoserver/webapps -name "gt-jdbc-postgis*.jar" | head -1)) \
   && wget --no-verbose "https://repo.osgeo.org/repository/release/org/geotools/jdbc/gt-jdbc-hana/${GEOTOOLS_VER}/gt-jdbc-hana-${GEOTOOLS_VER}.jar" \
   && mv gt-jdbc-hana-${GEOTOOLS_VER}.jar $(dirname $(find /geoserver/webapps -name "ngdbc*.jar" | head -1)) \
+<<<<<<< HEAD
   && mkdir -p ${GEOSERVER_DATA_DIR} /geoserver/dlplugins
 
 #install extensions
@@ -31,6 +32,10 @@ RUN wget --no-verbose "https://freefr.dl.sourceforge.net/project/geoserver/GeoSe
   && (ls -1 *.zip | while read f; do unzip -q -o $f ; done)  \
   && mv *.jar $(dirname $(find /geoserver/webapps -name "ngdbc*.jar" | head -1)) \
   && cd /geoserver && rm -rf /geoserver/dlplugins
+=======
+  && mkdir -p ${GEOSERVER_DATA_DIR}
+
+>>>>>>> 91c66dfb5089a60c5befb4ccc864445dd43af696
 
 CMD ${GEOSERVER_HOME}/bin/startup.sh 
 

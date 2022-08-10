@@ -12,7 +12,10 @@ Pull the image with
 
 Start it on port 8080 with
 
-```docker run -d -it -p 8080:8080/tcp geoserver4hana```
+```
+mkdir /tmp/geoserver_data
+docker run -d -it -p 8080:8080/tcp -v /tmp/geoserver_data:/geoserver/data_dir remiremi/geoserver4hana
+```
 
 Then connect to the web page at [http://localhost:8080/geoserver/](http://localhost:8080/geoserver/)
 
